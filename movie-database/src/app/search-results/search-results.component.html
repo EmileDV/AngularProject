@@ -8,5 +8,9 @@
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-<app-movie *ngFor="let movie of searchResults" [movie]="movie"></app-movie>
 
+<div class="container">
+    <div class="row">
+        <app-movie class="col-4" *ngFor="let movie of searchResults" [movie]="movie"></app-movie>
+    </div>
+</div>

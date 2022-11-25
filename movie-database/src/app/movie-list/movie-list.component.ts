@@ -17,6 +17,10 @@ export class MovieListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  RemovefromWatchList(): void {
+    this.movieService.deleteMovie(this.movie.id).subscribe();
+  }
+
 
 
 

@@ -1,2 +1,12 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label >Search</label>
+        <input [(ngModel)]="searchTerm" type="text" class="form-control" name="searchTerm"
+            placeholder="Search Movie">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
 <app-movie *ngFor="let movie of searchResults" [movie]="movie"></app-movie>
 

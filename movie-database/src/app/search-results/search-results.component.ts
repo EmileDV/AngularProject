@@ -12,15 +12,23 @@ export class SearchResultsComponent implements OnInit {
 
   searchResults: Movie[] = []
 
+  searchTerm: string = ""
+
   constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
-    this.movieService.searchMovieDB("Avengers").subscribe(result => {
+  }
+
+  onSubmit() {
+    console.log(this.searchTerm)
+    this.movieService.searchMovieDB(this.searchTerm).subscribe(result => {
       this.searchResults = result.results.map((resultMovie: any) => ({
         id : 0,
         title : resultMovie.title,
+        description: resultMovie.overview,
+        imageUrl: "https://image.tmdb.org/t/p/w500" + resultMovie.poster_path,
+
       }))
     })
   }
-
 }

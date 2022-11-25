@@ -1,34 +1,16 @@
-nav ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0px;
-}
+nav {
+    /* Create the gradient. */
+    background-image: linear-gradient(45deg, #2deede, #ae02f1);
 
-nav li {
-    flex: 1 1 auto;
-    display: flex;
-}
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
 
-nav a {
-    flex: 1 1 auto;
-    text-decoration: none;
-    text-align: center;
-    padding: 20px;
-    background-color: lightgrey;
-    color: black;
-}
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    
+    -webkit-text-fill-color: black;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 
-nav a.active {
-    background-color: lightsalmon;
-    color: black;
-}
-
-nav a:hover {
-    color: lightgrey;
-    background-color: grey;
-}
-
-nav a.active {
-    background-color: lightsalmon;
-    color: black;
 }

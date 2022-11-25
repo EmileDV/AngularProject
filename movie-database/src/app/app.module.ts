@@ -8,6 +8,9 @@ import { MovieComponent } from './movie/movie.component';
 import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { FormsModule } from '@angular/forms';
+import { MyListComponent } from './my-list/my-list.component';
+import { MovieListComponent } from './movie-list/movie-list.component';
 
 @NgModule({
   declarations: [
@@ -15,13 +18,16 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     HomeComponent,
     MovieComponent,
     MenuComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    MyListComponent,
+    MovieListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

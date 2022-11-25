@@ -7,13 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { MovieComponent } from './movie/movie.component';
 import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MovieComponent,
-    MenuComponent
+    MenuComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
